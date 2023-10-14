@@ -167,3 +167,8 @@ int MQTTSerialize_pubcomp(unsigned char* buf, int buflen, unsigned short packeti
 }
 
 
+int MQTTSerialize_pubrec(unsigned char* buf, int buflen, unsigned short packetid)
+{
+	return MQTTSerialize_ack(buf, buflen, PUBREC, 0, packetid);
+}
+
